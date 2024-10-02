@@ -6,7 +6,7 @@ import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 function WelcomeScreen() {
   return (
     <ImageBackground
-      blurRadius={10}
+      blurRadius={5}
       style={styles.background}
       source={require("../../assets/images/background.jpg")}
     >
@@ -15,9 +15,7 @@ function WelcomeScreen() {
           style={styles.logo}
           source={require("../../assets/images/share_the_unwanted.png")}
         />
-        <Text style={styles.txt}>
-          Share the Unwanted: Your Extra Could Be Their Essential!
-        </Text>
+        <Text style={styles.txt}>One App, Endless Expertise.</Text>
       </View>
       <View style={styles.btnsContainer}>
         <BtnPrimary>Login</BtnPrimary>

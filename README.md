@@ -1,3 +1,3 @@
-App called BuyNothing (DEMO) where user can give away things that are no longer needed for free.
+App called BuyNothing (DEMO) where user can promote/hire services from people around.
 
-The way this app is intended to generate revenue is by adding publicity.
+The way this app is intended to generate revenue is by charging a small amount for service.
