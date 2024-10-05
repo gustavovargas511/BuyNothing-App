@@ -1,13 +1,18 @@
 import { View, Text, Image, StyleSheet } from "react-native";
 import React from "react";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 import colors from "../config/colors";
 
 const ViewImageScreen = () => {
   return (
     <View style={styles.container}>
-      <View style={styles.closeIcon}></View>
-      <View style={styles.deleteIcon}></View>
+      <View style={styles.closeIcon}>
+        <AntDesign name="close" size={30} color="white" />
+      </View>
+      <View style={styles.deleteIcon}>
+        <AntDesign name="delete" size={30} color="white" />
+      </View>
       <Image
         source={require("../../assets/images/clothes_bulk.jpg")}
         style={styles.productImg}
@@ -23,20 +28,14 @@ const styles = StyleSheet.create({
     backgroundColor: colors.black,
   },
   closeIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: colors.primary,
     position: "absolute",
-    top: 40,
-    left: 40,
+    top: 80,
+    left: 30,
   },
   deleteIcon: {
-    width: 50,
-    height: 50,
-    backgroundColor: colors.secondary,
     position: "absolute",
-    top: 40,
-    right: 40,
+    top: 80,
+    right: 30,
   },
   productImg: {
     width: "100%",
