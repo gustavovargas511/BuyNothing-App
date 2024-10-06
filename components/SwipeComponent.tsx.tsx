@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Animated, Pressable } from "react-native";
 import { Swipeable } from "react-native-gesture-handler";
+import FontAwesome from "@expo/vector-icons/FontAwesome";
 import colors from "@/app/config/colors";
 
 interface SwipeComponentProps {
@@ -33,14 +34,16 @@ const SwipeComponent = ({
       {rightSwipeAction ? (
         rightSwipeAction
       ) : (
-        <Text style={styles.actionText}>Delete</Text>
+        <Text style={styles.actionText}>
+          <FontAwesome name="trash-o" size={24} color="black" />
+        </Text>
       )}
     </Pressable>
   );
 
   return (
     <Swipeable
-      renderLeftActions={renderLeftActions}
+      // renderLeftActions={renderLeftActions}
       renderRightActions={renderRightActions}
       leftThreshold={50}
       rightThreshold={50}
