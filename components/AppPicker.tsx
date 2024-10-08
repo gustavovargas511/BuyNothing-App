@@ -11,13 +11,20 @@ import {
 
 import defaultStyles from "../app/config/styles";
 import Icon from "./Icon";
+import MaterialCommunityIcons from "@expo/vector-icons/build/MaterialCommunityIcons";
+import AppText from "./AppText/AppText";
 
 interface CustomDropdownProps {
   items: { label: string; value: string }[]; // Array of objects directly defined in the prop
+  iconName?: keyof typeof MaterialCommunityIcons.glyphMap;
   onValueChange: (value: string) => void;
 }
 
-const CustomDropdown = ({ items, onValueChange }: CustomDropdownProps) => {
+const CustomDropdown = ({
+  items,
+  iconName = "apps",
+  onValueChange,
+}: CustomDropdownProps) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedValue, setSelectedValue] = useState<string | null>(null);
 
@@ -35,13 +42,14 @@ const CustomDropdown = ({ items, onValueChange }: CustomDropdownProps) => {
       >
         <View style={styles.pickerLabel}>
           <Icon
-            name={"apps"}
+            name={iconName}
             iconColor={colors.darkGrey}
             backgroundColor={colors.ligthGrey}
           />
-          <Text style={defaultStyles.text}>
+          {/* <Text style={defaultStyles.text}>
             {selectedValue || "Select an item"}
-          </Text>
+          </Text> */}
+          <AppText style={{color: colors.mediumGrey}}>{selectedValue || "Select an item"}</AppText>
         </View>
       </TouchableOpacity>
 

@@ -15,6 +15,7 @@ import AppTextInput from "@/components/AppTextInput";
 import CustomDropdown from "@/components/AppPicker";
 import LoginScreen from "./screens/LoginScreen";
 import FmkLoginScreen from "./screens/DemoLoginScreen";
+import ListingEditScreen from "./screens/ListingEditScreen";
 
 export default function Index() {
   // return <WelcomeScreen />;
@@ -74,5 +75,6 @@ export default function Index() {
   //   </SafeAreaView>
   // );
 
-  return <LoginScreen />;
+  // return <LoginScreen />;
+  return (<ListingEditScreen/>)
 }
