@@ -10,8 +10,8 @@ function Separator() {
 const styles = StyleSheet.create({
   line: {
     width: "100%",
-    height: 1,
-    backgroundColor: colors.black,
+    height: 2,
+    backgroundColor: colors.ligthGrey,
   },
 });
 

@@ -11,11 +11,12 @@ import {
 } from "react-native";
 import AppText from "./AppText/AppText";
 import colors from "@/app/config/colors";
+import Icon from "./Icon";
 
 interface ListItemProps {
   title: string;
   subTitle: string;
-  image: ImageSourcePropType; // Image source prop type
+  image?: ImageSourcePropType; // Image source prop type
   handleSelection?: () => void;
 }
 
@@ -27,7 +28,13 @@ function ListItem({ title, subTitle, image, handleSelection }: ListItemProps) {
       onPress={handleSelection}
     >
       <View style={styles.container}>
-        <Image style={styles.image} source={image} />
+        {image ? (
+          <Image style={styles.image} source={image} />
+        ) : (
+          <View style={{ marginLeft: 10 }}>
+            <Icon name="email" />
+          </View>
+        )}
         <View style={styles.infoContainer}>
           <AppText style={styles.title}>{title}</AppText>
           <AppText style={styles.subTitle}>{subTitle}</AppText>
@@ -52,6 +59,7 @@ const styles = StyleSheet.create({
     height: 70,
     borderRadius: 35,
     marginRight: 5,
+    marginLeft: 5,
   },
   title: {
     fontSize: 18,
