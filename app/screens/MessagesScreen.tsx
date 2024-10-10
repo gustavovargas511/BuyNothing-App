@@ -9,14 +9,14 @@ import SwipeComponent from "@/components/SwipeComponent.tsx";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title: "Juan Perez",
+    description: "I need a faucet repair",
     image: require("../../assets/images/myself.jpg"),
   },
   {
     id: 2,
-    title: "T2",
-    description: "D2",
+    title: "John Doe",
+    description: "Are you available to repair broken pipes?",
     image: require("../../assets/images/myself.jpg"),
   },
   {

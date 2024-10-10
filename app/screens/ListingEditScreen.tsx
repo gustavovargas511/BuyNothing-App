@@ -8,6 +8,7 @@ import * as Yup from "yup";
 import AppText from "@/components/AppText/AppText";
 import colors from "../config/colors";
 import AppPicker from "@/components/AppPicker";
+import MaterialCommunityIcons from "@expo/vector-icons/build/MaterialCommunityIcons";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required("Title cannot be empty").label("Email"),

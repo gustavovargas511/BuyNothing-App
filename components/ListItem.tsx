@@ -12,6 +12,7 @@ import {
 import AppText from "./AppText/AppText";
 import colors from "@/app/config/colors";
 import Icon from "./Icon";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 interface ListItemProps {
   title: string;
@@ -36,9 +37,10 @@ function ListItem({ title, subTitle, image, handleSelection }: ListItemProps) {
           </View>
         )}
         <View style={styles.infoContainer}>
-          <AppText style={styles.title}>{title}</AppText>
-          <AppText style={styles.subTitle}>{subTitle}</AppText>
+          <AppText style={styles.title} numberOfLines={1}>{title}</AppText>
+          <AppText style={styles.subTitle} numberOfLines={2}>{subTitle}</AppText>
         </View>
+          <MaterialCommunityIcons name="chevron-right" size={20} />
       </View>
     </TouchableHighlight>
   );
@@ -46,11 +48,13 @@ function ListItem({ title, subTitle, image, handleSelection }: ListItemProps) {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     flexDirection: "row",
     width: "100%",
     marginVertical: 5,
   },
   infoContainer: {
+    flex: 1,
     padding: 5,
     paddingTop: 8,
   },

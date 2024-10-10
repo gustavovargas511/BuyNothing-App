@@ -75,6 +75,6 @@ export default function Index() {
   //   </SafeAreaView>
   // );
 
-  // return <LoginScreen />;
-  return (<ListingEditScreen/>)
+  return <LoginScreen />;
+  // return (<ListingEditScreen/>)
 }
